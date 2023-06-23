@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3x20vxw2hk3c"]
+
+[ext_resource type="Script" path="res://scenes/Player.gd" id="1_vp0c5"]
+[ext_resource type="Texture2D" uid="uid://cufa3tcmbwqvs" path="res://assets/Player/MinerMovemenSpritesheet.png" id="2_rd4mm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hs36j"]
+size = Vector2(9.42461, 20)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_vp0c5")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("2_rd4mm")
+region_enabled = true
+region_rect = Rect2(1, 8, 14, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18.5252, 16)
+shape = SubResource("RectangleShape2D_hs36j")
